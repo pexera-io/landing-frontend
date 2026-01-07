@@ -37,6 +37,22 @@
         .animate-float-delayed { animation: float-delayed 4s ease-in-out infinite; animation-delay: 2s; }
         .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
         
+        /* Select text color - gray for placeholder, black for selected options */
+        /* Override Tailwind's color: inherit */
+        select[name="employees"] {
+            color: #111827 !important; /* black - default for selected options */
+        }
+        /* When placeholder is selected (invalid state), show gray */
+        select[name="employees"]:invalid {
+            color: #9CA3AF !important; /* gray-400 - for placeholder */
+        }
+        select[name="employees"] option {
+            color: #111827; /* black - for all dropdown options */
+        }
+        select[name="employees"] option:first-child {
+            color: #9CA3AF; /* gray - for placeholder option in dropdown */
+        }
+        
         /* Smooth Scrolling */
         html { scroll-behavior: smooth; }
     </style>
@@ -505,6 +521,22 @@
                         </div>
                     </div>
 
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold ml-1 text-darkText">Phone</label>
+                        <div class="relative">
+                            <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="phone" class="w-4.5 h-4.5"></i></div>
+                            <input type="tel" name="phone" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="+38 (099) 123 45 67">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold ml-1 text-darkText">Job Title</label>
+                        <div class="relative">
+                            <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="chess-queen" class="w-4.5 h-4.5"></i></div>
+                            <input type="text" name="title" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="Queen">
+                        </div>
+                    </div>
+
                     <div class="grid md:grid-cols-2 gap-5 md:gap-6">
                         <div class="space-y-2">
                             <label class="text-sm font-bold ml-1 text-darkText">Company Name</label>
@@ -518,8 +550,8 @@
                             <label class="text-sm font-bold ml-1 text-darkText">Company Size</label>
                             <div class="relative">
                                 <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="building-2" class="w-4.5 h-4.5"></i></div>
-                                <select name="employees" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all appearance-none bg-white">
-                                    <option value="">Select size</option>
+                                <select name="employees" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all appearance-none">
+                                    <option value="">Select size</option>   
                                     <option value="1-10">1-10 employees</option>
                                     <option value="11-50">11-50 employees</option>
                                     <option value="51-200">51-200 employees</option>
@@ -621,7 +653,7 @@
                 formData.append('timestamp', new Date().toISOString());
 
                 // Send to Google Script
-                await fetch('https://script.google.com/macros/s/AKfycbz7rqcpZoBWqU46V1D8a5Fkx3ahLQi7y8uM06v18LTF30NRQ19TWh5WiIa4oS9pRKbxAg/exec', {
+                await fetch('https://script.google.com/macros/s/AKfycbw2SA1UqZPjW5-cJrPDNCEOWJfHPUevH7NVvopeZIdRvg1QgjV55zqTqjsIBQAHWFpr/exec', {
                     method: 'POST',
                     body: formData,
                     mode: 'no-cors'

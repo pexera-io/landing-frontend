@@ -63,6 +63,14 @@
             pointer-events: none;
             z-index: 0;
         }
+
+        /* FAQ Styling */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 
     <script>
@@ -317,6 +325,299 @@
             </div>
         </section>
 
+        <!-- How it Works Section -->
+        <section class="py-16 md:py-24 px-6 bg-[#F4F8F2] overflow-hidden">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-6 text-center text-darkText">How It Works</h2>
+                
+                <!-- NEW LAPTOP ANIMATED APP FLOW -->
+                <div class="flex justify-center mb-16">
+                    <div class="relative w-full max-w-4xl mx-auto perspective-1000">
+                        <!-- Laptop Screen Bezel -->
+                        <div id="demo-stage" class="relative w-full aspect-[16/10] bg-gray-900 rounded-t-2xl border-[12px] border-gray-800 shadow-2xl overflow-hidden ring-4 ring-gray-200/50 z-20">
+                            
+                            <!-- Camera Dot -->
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-lg z-30 flex items-center justify-center">
+                                <div class="w-1.5 h-1.5 bg-gray-600 rounded-full shadow-inner ring-1 ring-gray-700"></div>
+                            </div>
+
+                            <!-- Screen 1: Login -->
+                            <div class="demo-screen active absolute inset-0 bg-white flex flex-col items-center justify-center p-8" data-step="0">
+                                <div class="w-20 h-20 bg-primary/10 rounded-2xl mb-6 flex items-center justify-center shadow-sm border border-primary/20">
+                                    <!-- Using favicon as requested -->
+                                    <img src="favicon.ico" alt="Pexera Logo" class="w-12 h-12 object-contain">
+                                </div>
+                                <h3 class="font-bold text-3xl text-darkText mb-1">Welcome back</h3>
+                                <p class="text-sm text-gray-500 mb-8">Enter your details to access your workspace.</p>
+                                
+                                <div class="w-full max-w-xs space-y-4">
+                                    <div class="w-full h-12 bg-gray-50 border border-gray-200 rounded-xl px-4 flex items-center text-sm text-gray-500">
+                                        <i data-lucide="mail" class="w-4 h-4 mr-3 opacity-50"></i> jack@company.com
+                                    </div>
+                                    <div class="w-full h-12 bg-gray-50 border border-gray-200 rounded-xl px-4 flex items-center text-sm text-gray-500 justify-between">
+                                        <div class="flex items-center"><i data-lucide="lock" class="w-4 h-4 mr-3 opacity-50"></i> ••••••••</div>
+                                    </div>
+                                    <div class="w-full h-12 bg-darkText shadow-lg shadow-darkText/20 rounded-xl text-white text-sm flex items-center justify-center font-bold mt-2 hover:bg-gray-800 transition-colors">Log In</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Screen 2: Interests (Desktop Layout) -->
+                            <div class="demo-screen inactive absolute inset-0 bg-gray-50 flex" data-step="1">
+                                <!-- Sidebar -->
+                                <div class="w-64 bg-white border-r border-gray-200 p-6 flex flex-col hidden md:flex">
+                                    <div class="flex items-center gap-2 mb-8">
+                                        <img src="favicon.ico" class="w-6 h-6">
+                                        <span class="font-bold text-darkText">Pexera</span>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <div class="p-2 bg-green-50 text-green-700 rounded-lg text-sm font-medium flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Profile</div>
+                                        <div class="p-2 text-gray-500 rounded-lg text-sm font-medium flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Schedule</div>
+                                    </div>
+                                </div>
+
+                                <!-- Main Content -->
+                                <div class="flex-1 p-8 md:p-12 flex flex-col justify-center items-center">
+                                    <div class="w-full max-w-lg">
+                                        <h3 class="font-bold text-2xl text-darkText mb-2">What do you want to talk about?</h3>
+                                        <p class="text-sm text-gray-500 mb-8">Select topics to match with the right colleagues.</p>
+                                        
+                                        <div class="grid grid-cols-3 gap-3 mb-8">
+                                            <div class="px-4 py-3 bg-white border-2 border-primary text-primary rounded-xl font-bold shadow-sm flex items-center justify-center text-center text-sm cursor-pointer">Product Strategy</div>
+                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">UX Design</div>
+                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">AI Tools</div>
+                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">Sales Tactics</div>
+                                            <div class="px-4 py-3 bg-white border-2 border-primary text-primary rounded-xl font-bold shadow-sm flex items-center justify-center text-center text-sm cursor-pointer">Leadership</div>
+                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">Remote Work</div>
+                                        </div>
+                                        
+                                        <div class="flex justify-end">
+                                            <div class="px-8 py-3 bg-darkText rounded-xl text-white text-sm font-bold shadow-lg">Find a Match -></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 3: Match (Desktop Layout) -->
+                            <div class="demo-screen inactive absolute inset-0 bg-white flex flex-col items-center justify-center p-8" data-step="2">
+                                <div class="text-center w-full" id="searching-ui">
+                                    <div class="relative w-32 h-32 mx-auto mb-8">
+                                        <div class="absolute inset-0 border-4 border-gray-100 rounded-full"></div>
+                                        <div class="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                                        <div class="absolute inset-2 rounded-full overflow-hidden bg-gray-50 border-4 border-white shadow-inner">
+                                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jack" class="w-full h-full opacity-50 grayscale" />
+                                        </div>
+                                    </div>
+                                    <h3 class="font-bold text-2xl text-darkText mb-2">Finding your coffee buddy...</h3>
+                                    <p class="text-sm text-gray-500">Scanning for "Product Strategy" & "Leadership" matches</p>
+                                </div>
+                                
+                                <!-- Match Found Overlay -->
+                                <div class="absolute inset-0 bg-gradient-to-b from-green-50/90 to-white flex flex-col items-center justify-center p-8 transition-all duration-500 transform translate-y-full" id="match-found-ui">
+                                    <div class="bg-white rounded-3xl p-8 text-center border border-gray-100 shadow-xl max-w-md w-full relative overflow-hidden">
+                                        <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+                                        <div class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg overflow-hidden mb-6 bg-gray-100">
+                                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-full h-full object-cover" />
+                                        </div>
+                                        <h3 class="font-bold text-2xl text-darkText mb-1">Annie Hall</h3>
+                                        <p class="text-sm text-gray-500 font-medium uppercase tracking-wide mb-4">Engineering Lead</p>
+                                        
+                                        <div class="flex gap-2 justify-center mb-6">
+                                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100">🔥 Product</span>
+                                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100">🔥 Leadership</span>
+                                        </div>
+                                        
+                                        <button class="w-full py-3 bg-darkText text-white rounded-xl font-bold hover:bg-black transition-colors">Start Chatting</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 4: Chat (Desktop Layout) -->
+                            <div class="demo-screen inactive absolute inset-0 bg-white flex" data-step="3">
+                                <!-- Chat Sidebar -->
+                                <div class="w-72 border-r border-gray-200 flex flex-col bg-gray-50 hidden md:flex">
+                                    <div class="p-4 border-b border-gray-200 font-bold text-gray-700">Messages</div>
+                                    <div class="p-3">
+                                        <div class="bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex gap-3 cursor-pointer">
+                                            <div class="relative">
+                                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-10 h-10 rounded-full bg-gray-100 border border-gray-200">
+                                                <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex justify-between items-baseline mb-0.5">
+                                                    <div class="font-bold text-sm text-gray-900">Annie</div>
+                                                    <div class="text-[10px] text-gray-400">9:42 AM</div>
+                                                </div>
+                                                <div class="text-xs text-gray-500 truncate">Let's do it! Tuesday works?</div>
+                                            </div>
+                                        </div>
+                                        <!-- Ghost items -->
+                                        <div class="mt-2 p-3 flex gap-3 opacity-50">
+                                            <div class="w-10 h-10 rounded-full bg-gray-200"></div>
+                                            <div class="flex-1 space-y-2 py-1">
+                                                <div class="h-2 bg-gray-200 rounded w-1/3"></div>
+                                                <div class="h-2 bg-gray-200 rounded w-2/3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Main Chat Area -->
+                                <div class="flex-1 flex flex-col bg-white">
+                                    <div class="h-16 border-b border-gray-200 flex items-center px-6 justify-between">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-8 h-8 rounded-full border border-gray-200">
+                                            <span class="font-bold text-gray-800">Annie Hall</span>
+                                        </div>
+                                        <div class="flex gap-4 text-gray-400">
+                                            <i data-lucide="phone" class="w-5 h-5 cursor-pointer hover:text-gray-600"></i>
+                                            <i data-lucide="video" class="w-5 h-5 cursor-pointer hover:text-primary"></i>
+                                            <i data-lucide="info" class="w-5 h-5 cursor-pointer hover:text-gray-600"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex-1 p-6 space-y-4 overflow-hidden flex flex-col justify-end">
+                                        <div class="flex justify-center mb-4"><span class="text-xs text-gray-400 bg-gray-50 px-3 py-1 rounded-full">Today</span></div>
+                                        
+                                        <div class="flex gap-3">
+                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-8 h-8 rounded-full self-end mb-1">
+                                            <div class="bg-gray-100 text-gray-800 p-3 rounded-2xl rounded-bl-none max-w-md text-sm">
+                                                Hi Jack! I saw you're interested in Growth Marketing too.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex gap-3 flex-row-reverse">
+                                            <div class="bg-primary text-white p-3 rounded-2xl rounded-br-none max-w-md text-sm shadow-md">
+                                                Hey Annie! Yes, would love to compare notes. Coffee?
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex gap-3">
+                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-8 h-8 rounded-full self-end mb-1">
+                                            <div class="bg-gray-100 text-gray-800 p-3 rounded-2xl rounded-bl-none max-w-md text-sm">
+                                                Let's do it! Tuesday works?
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mx-auto my-2 w-full max-w-sm">
+                                            <div class="bg-white border border-yellow-200 rounded-xl p-4 shadow-sm flex items-center gap-4">
+                                                <div class="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center text-yellow-600">
+                                                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div class="font-bold text-gray-800 text-sm">Coffee Chat</div>
+                                                    <div class="text-xs text-gray-500">Tue, Oct 24 • 10:00 AM</div>
+                                                </div>
+                                                <div class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Sent</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 5: Video Call (Side by Side) -->
+                            <div class="demo-screen inactive absolute inset-0 bg-gray-900 flex flex-col p-4" data-step="4">
+                                <div class="flex-1 grid grid-cols-2 gap-4">
+                                    <!-- Person 1 -->
+                                    <div class="relative rounded-2xl overflow-hidden bg-gray-800 shadow-2xl border border-gray-700 group">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700" />
+                                        <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-sm font-medium flex items-center gap-2">
+                                            Annie Hall <i data-lucide="mic" class="w-3 h-3 text-green-400"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Person 2 (Self) -->
+                                    <div class="relative rounded-2xl overflow-hidden bg-gray-800 shadow-2xl border border-gray-700">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jack" class="w-full h-full object-cover" />
+                                        <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-sm font-medium">
+                                            You
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Controls -->
+                                <div class="h-20 flex items-center justify-center gap-4 mt-4">
+                                    <button class="p-4 rounded-full bg-gray-800 hover:bg-gray-700 text-white transition-colors"><i data-lucide="mic-off" class="w-5 h-5"></i></button>
+                                    <button class="p-4 rounded-full bg-gray-800 hover:bg-gray-700 text-white transition-colors"><i data-lucide="video" class="w-5 h-5"></i></button>
+                                    <button class="p-4 rounded-full bg-red-500 hover:bg-red-600 text-white shadow-lg shadow-red-500/20 px-8 transition-colors"><i data-lucide="phone-off" class="w-6 h-6"></i></button>
+                                    <button class="p-4 rounded-full bg-gray-800 hover:bg-gray-700 text-white transition-colors"><i data-lucide="message-square" class="w-5 h-5"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Screen 6: Feedback (Desktop Layout) -->
+                            <div class="demo-screen inactive absolute inset-0 bg-white flex flex-col items-center justify-center p-8" data-step="5">
+                                <div class="max-w-md w-full text-center">
+                                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 mx-auto animate-bounce">
+                                        <i data-lucide="check" class="w-10 h-10 text-green-600"></i>
+                                    </div>
+                                    <h3 class="font-bold text-3xl text-darkText mb-2">Coffee Chat Complete!</h3>
+                                    <p class="text-gray-500 mb-8">How was your conversation with Annie?</p>
+                                    
+                                    <div class="flex gap-4 justify-center mb-8">
+                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
+                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
+                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
+                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
+                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
+                                    </div>
+                                    
+                                    <div class="w-full bg-white border border-gray-200 rounded-2xl p-4 mb-8 text-left shadow-sm ring-4 ring-gray-50">
+                                        <p class="text-sm text-gray-800 font-medium">"Great insights on the product roadmap. Annie is awesome!"</p>
+                                    </div>
+                                    
+                                    <button class="w-full py-4 bg-darkText text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">Submit Feedback</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Laptop Base -->
+                        <div class="relative w-[120%] -ml-[10%] h-5 bg-gray-200 rounded-b-xl shadow-xl border-t border-gray-300 mt-[-2px] z-10 flex justify-center">
+                             <!-- Trackpad Indent -->
+                            <div class="w-1/3 h-2 bg-gray-300/50 rounded-b-lg border-t border-gray-300/50"></div>
+                        </div>
+                        
+                        <!-- Reflection/Shadow below laptop -->
+                        <div class="w-[90%] mx-auto h-4 bg-black/20 rounded-[100%] blur-md mt-2"></div>
+                    </div>
+                </div>
+                <!-- END ANIMATION -->
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-110 transition-transform">1</div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
+                            <h3 class="text-lg font-bold mb-2 text-darkText">Setup</h3>
+                            <p class="text-sm text-gray-500">HR sets up the workspace & invites employees.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-100 transition-transform">2</div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
+                            <h3 class="text-lg font-bold mb-2 text-darkText">Profile</h3>
+                            <p class="text-sm text-gray-500">Employees create profiles with interests & roles.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-110 transition-transform">3</div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
+                            <h3 class="text-lg font-bold mb-2 text-darkText">Match</h3>
+                            <p class="text-sm text-gray-500">Our algorithm suggests the perfect coffee partner.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-110 transition-transform">4</div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
+                            <h3 class="text-lg font-bold mb-2 text-darkText">Connect</h3>
+                            <p class="text-sm text-gray-500">Meet, chat, and leave feedback to grow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Features Section -->
         <section id="features" class="py-16 md:py-24 px-6 bg-[#F9FCF8]">
             <div class="container mx-auto max-w-6xl">
@@ -444,299 +745,6 @@
             </div>
         </section>
 
-        <!-- How it Works Section -->
-        <section class="py-16 md:py-24 px-6 bg-[#F4F8F2] overflow-hidden">
-            <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-6 text-center text-darkText">How It Works</h2>
-                
-                <!-- NEW LAPTOP ANIMATED APP FLOW -->
-                <div class="flex justify-center mb-16">
-                    <div class="relative w-full max-w-4xl mx-auto perspective-1000">
-                        <!-- Laptop Screen Bezel -->
-                        <div id="demo-stage" class="relative w-full aspect-[16/10] bg-gray-900 rounded-t-2xl border-[12px] border-gray-800 shadow-2xl overflow-hidden ring-4 ring-gray-200/50 z-20">
-                            
-                            <!-- Camera Dot -->
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-lg z-30 flex items-center justify-center">
-                                <div class="w-1.5 h-1.5 bg-gray-600 rounded-full shadow-inner ring-1 ring-gray-700"></div>
-                            </div>
-
-                            <!-- Screen 1: Login -->
-                            <div class="demo-screen active absolute inset-0 bg-white flex flex-col items-center justify-center p-8" data-step="0">
-                                <div class="w-20 h-20 bg-primary/10 rounded-2xl mb-6 flex items-center justify-center shadow-sm border border-primary/20">
-                                    <!-- Using favicon as requested -->
-                                    <img src="favicon.ico" alt="Pexera Logo" class="w-12 h-12 object-contain">
-                                </div>
-                                <h3 class="font-bold text-3xl text-darkText mb-1">Welcome back</h3>
-                                <p class="text-sm text-gray-500 mb-8">Enter your details to access your workspace.</p>
-                                
-                                <div class="w-full max-w-xs space-y-4">
-                                    <div class="w-full h-12 bg-gray-50 border border-gray-200 rounded-xl px-4 flex items-center text-sm text-gray-500">
-                                        <i data-lucide="mail" class="w-4 h-4 mr-3 opacity-50"></i> felix@company.com
-                                    </div>
-                                    <div class="w-full h-12 bg-gray-50 border border-gray-200 rounded-xl px-4 flex items-center text-sm text-gray-500 justify-between">
-                                        <div class="flex items-center"><i data-lucide="lock" class="w-4 h-4 mr-3 opacity-50"></i> ••••••••</div>
-                                    </div>
-                                    <div class="w-full h-12 bg-darkText shadow-lg shadow-darkText/20 rounded-xl text-white text-sm flex items-center justify-center font-bold mt-2 hover:bg-gray-800 transition-colors">Log In</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Screen 2: Interests (Desktop Layout) -->
-                            <div class="demo-screen inactive absolute inset-0 bg-gray-50 flex" data-step="1">
-                                <!-- Sidebar -->
-                                <div class="w-64 bg-white border-r border-gray-200 p-6 flex flex-col hidden md:flex">
-                                    <div class="flex items-center gap-2 mb-8">
-                                        <img src="favicon.ico" class="w-6 h-6">
-                                        <span class="font-bold text-darkText">Pexera</span>
-                                    </div>
-                                    <div class="space-y-1">
-                                        <div class="p-2 bg-green-50 text-green-700 rounded-lg text-sm font-medium flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Profile</div>
-                                        <div class="p-2 text-gray-500 rounded-lg text-sm font-medium flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Schedule</div>
-                                    </div>
-                                </div>
-
-                                <!-- Main Content -->
-                                <div class="flex-1 p-8 md:p-12 flex flex-col justify-center items-center">
-                                    <div class="w-full max-w-lg">
-                                        <h3 class="font-bold text-2xl text-darkText mb-2">What do you want to talk about?</h3>
-                                        <p class="text-sm text-gray-500 mb-8">Select topics to match with the right colleagues.</p>
-                                        
-                                        <div class="grid grid-cols-3 gap-3 mb-8">
-                                            <div class="px-4 py-3 bg-white border-2 border-primary text-primary rounded-xl font-bold shadow-sm flex items-center justify-center text-center text-sm cursor-pointer">Product Strategy</div>
-                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">UX Design</div>
-                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">AI Tools</div>
-                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">Sales Tactics</div>
-                                            <div class="px-4 py-3 bg-white border-2 border-primary text-primary rounded-xl font-bold shadow-sm flex items-center justify-center text-center text-sm cursor-pointer">Leadership</div>
-                                            <div class="px-4 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:border-gray-300 flex items-center justify-center text-center text-sm cursor-pointer">Remote Work</div>
-                                        </div>
-                                        
-                                        <div class="flex justify-end">
-                                            <div class="px-8 py-3 bg-darkText rounded-xl text-white text-sm font-bold shadow-lg">Find a Match -></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Screen 3: Match (Desktop Layout) -->
-                            <div class="demo-screen inactive absolute inset-0 bg-white flex flex-col items-center justify-center p-8" data-step="2">
-                                <div class="text-center w-full" id="searching-ui">
-                                    <div class="relative w-32 h-32 mx-auto mb-8">
-                                        <div class="absolute inset-0 border-4 border-gray-100 rounded-full"></div>
-                                        <div class="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-                                        <div class="absolute inset-2 rounded-full overflow-hidden bg-gray-50 border-4 border-white shadow-inner">
-                                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" class="w-full h-full opacity-50 grayscale" />
-                                        </div>
-                                    </div>
-                                    <h3 class="font-bold text-2xl text-darkText mb-2">Finding your coffee buddy...</h3>
-                                    <p class="text-sm text-gray-500">Scanning for "Product Strategy" & "Leadership" matches</p>
-                                </div>
-                                
-                                <!-- Match Found Overlay -->
-                                <div class="absolute inset-0 bg-gradient-to-b from-green-50/90 to-white flex flex-col items-center justify-center p-8 transition-all duration-500 transform translate-y-full" id="match-found-ui">
-                                    <div class="bg-white rounded-3xl p-8 text-center border border-gray-100 shadow-xl max-w-md w-full relative overflow-hidden">
-                                        <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                                        <div class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg overflow-hidden mb-6 bg-gray-100">
-                                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-full h-full object-cover" />
-                                        </div>
-                                        <h3 class="font-bold text-2xl text-darkText mb-1">Annie Hall</h3>
-                                        <p class="text-sm text-gray-500 font-medium uppercase tracking-wide mb-4">Engineering Lead</p>
-                                        
-                                        <div class="flex gap-2 justify-center mb-6">
-                                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100">🔥 Product</span>
-                                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100">🔥 Leadership</span>
-                                        </div>
-                                        
-                                        <button class="w-full py-3 bg-darkText text-white rounded-xl font-bold hover:bg-black transition-colors">Start Chatting</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Screen 4: Chat (Desktop Layout) -->
-                            <div class="demo-screen inactive absolute inset-0 bg-white flex" data-step="3">
-                                <!-- Chat Sidebar -->
-                                <div class="w-72 border-r border-gray-200 flex flex-col bg-gray-50 hidden md:flex">
-                                    <div class="p-4 border-b border-gray-200 font-bold text-gray-700">Messages</div>
-                                    <div class="p-3">
-                                        <div class="bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex gap-3 cursor-pointer">
-                                            <div class="relative">
-                                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-10 h-10 rounded-full bg-gray-100 border border-gray-200">
-                                                <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
-                                            </div>
-                                            <div class="flex-1 min-w-0">
-                                                <div class="flex justify-between items-baseline mb-0.5">
-                                                    <div class="font-bold text-sm text-gray-900">Annie</div>
-                                                    <div class="text-[10px] text-gray-400">9:42 AM</div>
-                                                </div>
-                                                <div class="text-xs text-gray-500 truncate">Let's do it! Tuesday works?</div>
-                                            </div>
-                                        </div>
-                                        <!-- Ghost items -->
-                                        <div class="mt-2 p-3 flex gap-3 opacity-50">
-                                            <div class="w-10 h-10 rounded-full bg-gray-200"></div>
-                                            <div class="flex-1 space-y-2 py-1">
-                                                <div class="h-2 bg-gray-200 rounded w-1/3"></div>
-                                                <div class="h-2 bg-gray-200 rounded w-2/3"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Main Chat Area -->
-                                <div class="flex-1 flex flex-col bg-white">
-                                    <div class="h-16 border-b border-gray-200 flex items-center px-6 justify-between">
-                                        <div class="flex items-center gap-3">
-                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-8 h-8 rounded-full border border-gray-200">
-                                            <span class="font-bold text-gray-800">Annie Hall</span>
-                                        </div>
-                                        <div class="flex gap-4 text-gray-400">
-                                            <i data-lucide="phone" class="w-5 h-5 cursor-pointer hover:text-gray-600"></i>
-                                            <i data-lucide="video" class="w-5 h-5 cursor-pointer hover:text-primary"></i>
-                                            <i data-lucide="info" class="w-5 h-5 cursor-pointer hover:text-gray-600"></i>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex-1 p-6 space-y-4 overflow-hidden flex flex-col justify-end">
-                                        <div class="flex justify-center mb-4"><span class="text-xs text-gray-400 bg-gray-50 px-3 py-1 rounded-full">Today</span></div>
-                                        
-                                        <div class="flex gap-3">
-                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-8 h-8 rounded-full self-end mb-1">
-                                            <div class="bg-gray-100 text-gray-800 p-3 rounded-2xl rounded-bl-none max-w-md text-sm">
-                                                Hi Felix! I saw you're interested in Growth Marketing too.
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="flex gap-3 flex-row-reverse">
-                                            <div class="bg-primary text-white p-3 rounded-2xl rounded-br-none max-w-md text-sm shadow-md">
-                                                Hey Annie! Yes, would love to compare notes. Coffee?
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="flex gap-3">
-                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-8 h-8 rounded-full self-end mb-1">
-                                            <div class="bg-gray-100 text-gray-800 p-3 rounded-2xl rounded-bl-none max-w-md text-sm">
-                                                Let's do it! Tuesday works?
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="mx-auto my-2 w-full max-w-sm">
-                                            <div class="bg-white border border-yellow-200 rounded-xl p-4 shadow-sm flex items-center gap-4">
-                                                <div class="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center text-yellow-600">
-                                                    <i data-lucide="calendar" class="w-5 h-5"></i>
-                                                </div>
-                                                <div class="flex-1">
-                                                    <div class="font-bold text-gray-800 text-sm">Coffee Chat</div>
-                                                    <div class="text-xs text-gray-500">Tue, Oct 24 • 10:00 AM</div>
-                                                </div>
-                                                <div class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Sent</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Screen 5: Video Call (Side by Side) -->
-                            <div class="demo-screen inactive absolute inset-0 bg-gray-900 flex flex-col p-4" data-step="4">
-                                <div class="flex-1 grid grid-cols-2 gap-4">
-                                    <!-- Person 1 -->
-                                    <div class="relative rounded-2xl overflow-hidden bg-gray-800 shadow-2xl border border-gray-700 group">
-                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" class="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700" />
-                                        <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-sm font-medium flex items-center gap-2">
-                                            Annie Hall <i data-lucide="mic" class="w-3 h-3 text-green-400"></i>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Person 2 (Self) -->
-                                    <div class="relative rounded-2xl overflow-hidden bg-gray-800 shadow-2xl border border-gray-700">
-                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" class="w-full h-full object-cover" />
-                                        <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-sm font-medium">
-                                            You
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Controls -->
-                                <div class="h-20 flex items-center justify-center gap-4 mt-4">
-                                    <button class="p-4 rounded-full bg-gray-800 hover:bg-gray-700 text-white transition-colors"><i data-lucide="mic-off" class="w-5 h-5"></i></button>
-                                    <button class="p-4 rounded-full bg-gray-800 hover:bg-gray-700 text-white transition-colors"><i data-lucide="video" class="w-5 h-5"></i></button>
-                                    <button class="p-4 rounded-full bg-red-500 hover:bg-red-600 text-white shadow-lg shadow-red-500/20 px-8 transition-colors"><i data-lucide="phone-off" class="w-6 h-6"></i></button>
-                                    <button class="p-4 rounded-full bg-gray-800 hover:bg-gray-700 text-white transition-colors"><i data-lucide="message-square" class="w-5 h-5"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- Screen 6: Feedback (Desktop Layout) -->
-                            <div class="demo-screen inactive absolute inset-0 bg-white flex flex-col items-center justify-center p-8" data-step="5">
-                                <div class="max-w-md w-full text-center">
-                                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 mx-auto animate-bounce">
-                                        <i data-lucide="check" class="w-10 h-10 text-green-600"></i>
-                                    </div>
-                                    <h3 class="font-bold text-3xl text-darkText mb-2">Coffee Chat Complete!</h3>
-                                    <p class="text-gray-500 mb-8">How was your conversation with Annie?</p>
-                                    
-                                    <div class="flex gap-4 justify-center mb-8">
-                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
-                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
-                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
-                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
-                                        <i data-lucide="star" class="w-10 h-10 fill-yellow-400 text-yellow-400 drop-shadow-md cursor-pointer hover:scale-110 transition-transform"></i>
-                                    </div>
-                                    
-                                    <div class="w-full bg-white border border-gray-200 rounded-2xl p-4 mb-8 text-left shadow-sm ring-4 ring-gray-50">
-                                        <p class="text-sm text-gray-800 font-medium">"Great insights on the product roadmap. Annie is awesome!"</p>
-                                    </div>
-                                    
-                                    <button class="w-full py-4 bg-darkText text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">Submit Feedback</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Laptop Base -->
-                        <div class="relative w-[120%] -ml-[10%] h-5 bg-gray-200 rounded-b-xl shadow-xl border-t border-gray-300 mt-[-2px] z-10 flex justify-center">
-                             <!-- Trackpad Indent -->
-                            <div class="w-1/3 h-2 bg-gray-300/50 rounded-b-lg border-t border-gray-300/50"></div>
-                        </div>
-                        
-                        <!-- Reflection/Shadow below laptop -->
-                        <div class="w-[90%] mx-auto h-4 bg-black/20 rounded-[100%] blur-md mt-2"></div>
-                    </div>
-                </div>
-                <!-- END ANIMATION -->
-
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8">
-                    <!-- Step 1 -->
-                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
-                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-110 transition-transform">1</div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
-                            <h3 class="text-lg font-bold mb-2 text-darkText">Setup</h3>
-                            <p class="text-sm text-gray-500">HR sets up the workspace & invites employees.</p>
-                        </div>
-                    </div>
-                    <!-- Step 2 -->
-                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
-                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-100 transition-transform">2</div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
-                            <h3 class="text-lg font-bold mb-2 text-darkText">Profile</h3>
-                            <p class="text-sm text-gray-500">Employees create profiles with interests & roles.</p>
-                        </div>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
-                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-110 transition-transform">3</div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
-                            <h3 class="text-lg font-bold mb-2 text-darkText">Match</h3>
-                            <p class="text-sm text-gray-500">Our algorithm suggests the perfect coffee partner.</p>
-                        </div>
-                    </div>
-                    <!-- Step 4 -->
-                    <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
-                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 shadow-md bg-white border-4 border-primary text-darkText group-hover:scale-110 transition-transform">4</div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full max-w-xs h-full">
-                            <h3 class="text-lg font-bold mb-2 text-darkText">Connect</h3>
-                            <p class="text-sm text-gray-500">Meet, chat, and leave feedback to grow.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Waitlist / Contact Section -->
         <section id="waitlist" class="py-16 md:py-24 px-6 relative overflow-hidden bg-white border-t border-gray-100">
             <div class="container mx-auto max-w-2xl relative z-10">
@@ -822,6 +830,234 @@
                     
                     <p class="text-center text-xs text-gray-400 mt-4">We respect your privacy.</p>
                 </form>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 md:py-24 px-6 bg-[#F4F8F2]">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-darkText">Frequently Asked Questions</h2>
+                
+                <div class="grid md:grid-cols-2 gap-4 items-start">
+                    <!-- Left Column -->
+                    <div class="space-y-4">
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">What is Pexera?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Pexera helps professionals from different companies meet for short 1:1 online coffee conversations. It’s a simple, regular way to talk to new people, exchange experience, and feel more connected outside your own company.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Is this networking?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Yes. We really value classic networking and events. Pexera is simply another format: more one-on-one, more regular, and easier to fit into everyday work.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Is Pexera for social chats after work?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                It’s work-focused, but still human. Conversations are professional, relaxed, and natural.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Who is Pexera for?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                For people who want to grow their professional circle, learn how others work, and stay connected to the wider industry.<br><br>
+                                For companies that want to support engagement, development, and healthy external connections.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">What roles is Pexera for?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Pexera is role-agnostic. It works for any role your company decides to include: specialists, managers, team leads, founders, HR, sales, marketing, product, tech, operations, or mixed groups. Some companies open it to everyone. Others start with specific teams. Both approaches work.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">How does matching work?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                You choose to look for a coffee partner. The system matches you with someone based on role, specialization, and professional interests. If no one is available at that moment, the match happens automatically once someone appears.
+                            </div>
+                        </details>
+                        
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Do I meet people from my own company?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                No. Pexera focuses on cross-company conversations to bring fresh perspectives.
+                            </div>
+                        </details>
+                        
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">How often can I have coffee chats?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                There’s no strict weekly limit in the MVP. After each conversation, you leave feedback and can then go for the next one.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Is matching random?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Mostly interest-based. The system prioritizes shared professional context and interests. Random matching is only used when there are no overlaps.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">How do we schedule the call?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                For now, people agree on time directly in the chat. Calendar integrations are planned later.
+                            </div>
+                        </details>
+                        
+                         <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">What if the meeting didn’t happen?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Both participants confirm the outcome. If confirmations don’t match, the meeting isn’t counted.
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-4">
+                       
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Is feedback required?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Yes. It’s a short step that helps keep the experience thoughtful and meaningful. The feedback is mainly for your own insights and platform learning.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Who can see my feedback?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Only you. Companies see only aggregated, anonymous insights.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Are conversations private?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Yes. Messages are private. Pexera doesn’t read chats or share their content.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">What does the company see?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                High-level activity and engagement data, such as number of coffees and overall trends. No personal messages or individual notes.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Is Pexera about recruiting or job offers?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                No. It’s about professional exchange and connection. Companies can also set clear participation rules if needed.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">How do people join?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Through an invite from HR or management. After onboarding, users are ready to match.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Can users change their email themselves?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Email changes go through HR to keep things simple and secure.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">What problem does Pexera solve?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                It helps people feel less professionally isolated, build stronger networking habits, and grow diverse professional connections.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">What results does Pexera track?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Engagement, regularity of conversations, and changes in how connected people feel professionally.
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Does Pexera promise sales or instant results?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                No promises like that. Pexera focuses on building a healthy, human connection process. Results grow naturally over time.
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
             </div>
         </section>
 

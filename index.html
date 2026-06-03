@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pexera | Slack-Native AI Coaching for Managers</title>
+    <title>Pexera | Slack-Native AI Sales Call Coach</title>
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -38,10 +38,10 @@
         .animate-float-delayed { animation: float-delayed 4s ease-in-out infinite; animation-delay: 2s; }
         .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
         
-        select[name="managers"] { color: #111827 !important; }
-        select[name="managers"]:invalid { color: #9CA3AF !important; }
-        select[name="managers"] option { color: #111827; }
-        select[name="managers"] option:first-child { color: #9CA3AF; }
+        select[name="reps"] { color: #111827 !important; }
+        select[name="reps"]:invalid { color: #9CA3AF !important; }
+        select[name="reps"] option { color: #111827; }
+        select[name="reps"] option:first-child { color: #9CA3AF; }
         
         html { scroll-behavior: smooth; }
 
@@ -97,8 +97,8 @@
             
             <div class="hidden md:flex items-center gap-8">
                 <a href="#problem" class="font-medium text-gray-600 hover:text-darkText transition-colors">The Problem</a>
-                <a href="#how-it-works" class="font-medium text-gray-600 hover:text-darkText transition-colors">The Coaching Loop</a>
-                <a href="#privacy" class="font-medium text-gray-600 hover:text-darkText transition-colors">Privacy</a>
+                <a href="#how-it-works" class="font-medium text-gray-600 hover:text-darkText transition-colors">The Practice Loop</a>
+                <a href="#coaching" class="font-medium text-gray-600 hover:text-darkText transition-colors">Manager Dashboard</a>
                 
                 <button onclick="scrollToWaitlist()" class="px-6 py-2.5 rounded-full font-medium bg-primary text-darkText hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
                     Request Pilot
@@ -116,8 +116,8 @@
         <div id="mobile-menu" class="hidden absolute w-full bg-background border-b border-iconGrey/50 shadow-xl transition-all duration-300 origin-top">
             <div class="px-6 py-4 space-y-3 flex flex-col">
                 <a href="#problem" class="block font-medium py-3 text-gray-700 hover:text-darkText hover:bg-green-50 rounded-lg px-2 transition-colors">The Problem</a>
-                <a href="#how-it-works" class="block font-medium py-3 text-gray-700 hover:text-darkText hover:bg-green-50 rounded-lg px-2 transition-colors">The Coaching Loop</a>
-                <a href="#privacy" class="block font-medium py-3 text-gray-700 hover:text-darkText hover:bg-green-50 rounded-lg px-2 transition-colors">Privacy</a>
+                <a href="#how-it-works" class="block font-medium py-3 text-gray-700 hover:text-darkText hover:bg-green-50 rounded-lg px-2 transition-colors">The Practice Loop</a>
+                <a href="#coaching" class="block font-medium py-3 text-gray-700 hover:text-darkText hover:bg-green-50 rounded-lg px-2 transition-colors">Manager Dashboard</a>
                 <div class="pt-2">
                     <button onclick="scrollToWaitlist()" class="w-full px-6 py-3 rounded-full font-bold bg-primary text-darkText shadow-sm active:scale-95 transition-transform">
                         Request Pilot
@@ -133,20 +133,20 @@
         <header class="container mx-auto px-6 py-10 md:py-20 lg:py-24 grid lg:grid-cols-2 gap-10 md:gap-12 items-center overflow-visible">
             <div class="space-y-6 md:space-y-8 animate-fade-in-up order-1 text-center lg:text-left">
                 <div class="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold mb-2 bg-[#E6EFE6] text-secondary">
-                    <i data-lucide="message-square" class="w-3.5 h-3.5 mr-2 fill-current"></i>
-                    <span>Slack-Native Coaching for Managers</span>
+                    <i data-lucide="target" class="w-3.5 h-3.5 mr-2 fill-current"></i>
+                    <span>Slack-Native AI Sales Coach</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-darkText tracking-tight">
                     <span>Stop winging </span>
                     <span class="relative inline-block mx-1">
-                        <span>hard</span>
+                        <span>high-stakes</span>
                         <svg class="absolute w-full h-2 md:h-3 -bottom-1 left-0" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.00025 6.99997C25.7201 5.20404 121.28 -2.62312 198.001 2.49997" stroke="#9EC79B" stroke-width="3" stroke-linecap="round"/></svg>
                     </span>
                     <br class="hidden md:block"/>
-                    <span>conversations.</span>
+                    <span>sales calls.</span>
                 </h1>
                 <p class="text-lg md:text-xl leading-relaxed max-w-lg mx-auto lg:mx-0 text-bodyText">
-                    Managers and team leaders carry the highest-stakes conversations in the company. Pexera is an AI coach that prepares you for tough 1:1s, delivering feedback, and performance reviews directly in your work messenger.
+                    The practice loop for B2B sales teams that lives in the workflow. Anchor your pre-call prep to MEDDPICC, roleplay against deal-specific personas, and boost win rates—all inside Slack.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -154,13 +154,13 @@
                         Get Early Access
                     </button>
                     <button onclick="document.getElementById('how-it-works').scrollIntoView({behavior: 'smooth'})" class="flex items-center justify-center gap-2 px-6 py-3.5 font-medium text-darkText hover:bg-gray-100/50 rounded-full transition-colors">
-                        <span>See how it works</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <span>See the loop</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </button>
                 </div>
                 
                 <div class="pt-2 flex items-center justify-center lg:justify-start gap-3 text-xs md:text-sm text-gray-500 font-medium">
                     <i data-lucide="slack" class="w-5 h-5 text-gray-400"></i>
-                    <span>No new apps to install. Delivered entirely via Slack.</span>
+                    <span>Zero apps to install. No separate logins. Delivered in Slack.</span>
                 </div>
             </div>
 
@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="min-w-0">
                                     <h4 class="font-bold text-xs text-gray-800 truncate">Framework Grounded</h4>
-                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">SBI & Crucial Conversations</p>
+                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">MEDDPICC, SPIN & Challenger</p>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                                 </div>
                                 <div class="min-w-0">
                                     <h4 class="font-bold text-xs text-gray-800 truncate">Context Aware</h4>
-                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">Syncs w/ Google & Outlook</p>
+                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">Reads SFDC & Calendar events</p>
                                 </div>
                             </div>
                         </div>
@@ -210,12 +210,12 @@
                             <div class="bg-white p-2 md:p-3 rounded-xl shadow-lg border border-gray-100 flex items-center gap-2 w-48 md:w-60 scale-[0.85] md:scale-90 lg:scale-100 origin-bottom-left transition-transform">
                                 <div class="relative flex-shrink-0">
                                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg overflow-hidden bg-orange-100 flex items-center justify-center text-orange-600">
-                                        <i data-lucide="swords" class="w-5 h-5"></i>
+                                        <i data-lucide="users" class="w-5 h-5"></i>
                                     </div>
                                 </div>
                                 <div class="min-w-0">
                                     <h4 class="font-bold text-xs text-gray-800 truncate">Persona Roleplay</h4>
-                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">Practice vs. "Defensive IC"</p>
+                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">Practice vs. Skeptical CFO</p>
                                 </div>
                             </div>
                         </div>
@@ -225,12 +225,12 @@
                             <div class="bg-white p-2 md:p-3 rounded-xl shadow-lg border border-gray-100 flex flex-row-reverse text-right items-center gap-2 w-48 md:w-60 scale-[0.85] md:scale-90 lg:scale-100 origin-bottom-right transition-transform">
                                 <div class="relative flex-shrink-0">
                                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg overflow-hidden bg-green-100 flex items-center justify-center text-green-600">
-                                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                        <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
                                     </div>
                                 </div>
                                 <div class="min-w-0">
-                                    <h4 class="font-bold text-xs text-gray-800 truncate">Private & Secure</h4>
-                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">Transcripts are for you only</p>
+                                    <h4 class="font-bold text-xs text-gray-800 truncate">Manager Dashboard</h4>
+                                    <p class="text-[9px] md:text-[10px] text-gray-500 truncate">Coach reps mid-deal</p>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +247,7 @@
                 <div class="grid grid-cols-3 gap-2 md:gap-4 w-full max-w-[500px] border-t border-iconGrey/30 pt-6 md:pt-8">
                     <div class="text-center">
                         <div class="text-lg md:text-xl font-bold text-darkText mb-1">Prep</div>
-                        <div class="text-[10px] md:text-xs text-gray-600 font-bold uppercase tracking-wide">Structured Brief</div>
+                        <div class="text-[10px] md:text-xs text-gray-600 font-bold uppercase tracking-wide">MEDDPICC Brief</div>
                     </div>
                     <div class="text-center border-l border-iconGrey/30">
                         <div class="text-lg md:text-xl font-bold text-darkText mb-1">Roleplay</div>
@@ -255,7 +255,7 @@
                     </div>
                     <div class="text-center border-l border-iconGrey/30">
                         <div class="text-lg md:text-xl font-bold text-darkText mb-1">Reflect</div>
-                        <div class="text-[10px] md:text-xs text-gray-600 font-bold uppercase tracking-wide">Growth Capture</div>
+                        <div class="text-[10px] md:text-xs text-gray-600 font-bold uppercase tracking-wide">CRM Sync</div>
                     </div>
                 </div>
             </div>
@@ -265,9 +265,9 @@
         <section id="problem" class="py-16 md:py-24 px-6 bg-white border-t border-gray-50">
             <div class="container mx-auto max-w-6xl">
                 <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-darkText">Theory is easy. Real conversations are hard.</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-darkText">Theory is easy. Live deal execution is hard.</h2>
                     <p class="text-base md:text-lg text-bodyText px-4">
-                        Managers shouldn't have to learn by trial and error or rehearse high-stakes conversations with peers. Pexera provides a private space to practice and perfect your leadership approach.
+                        Stop burning unrecoverable meetings. Reps need a private space to stress-test their approach against realistic buyer objections before they ever join the Zoom room.
                     </p>
                 </div>
 
@@ -275,28 +275,28 @@
                     <!-- Case 1 -->
                     <div class="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
                         <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm border border-gray-100">
-                            <i data-lucide="message-circle-warning" class="w-8 h-8 text-primary"></i>
+                            <i data-lucide="phone-off" class="w-8 h-8 text-primary"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-darkText">Tough 1:1 Feedback</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">Need to deliver hard feedback to a defensive employee? Rehearse the conversation against an AI persona first, so you stay objective, behavioral, and specific instead of going off script.</p>
+                        <h3 class="text-xl font-bold mb-3 text-darkText">Cold Discovery</h3>
+                        <p class="text-sm leading-relaxed text-gray-600">Got 12 discovery calls booked tomorrow? Practice your opening 90 seconds against a "Status-Quo Defender" persona that hangs up if you miss the hook.</p>
                     </div>
 
                     <!-- Case 2 -->
                     <div class="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
                         <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm border border-primary">
-                            <i data-lucide="file-warning" class="w-8 h-8 text-darkText"></i>
+                            <i data-lucide="presentation" class="w-8 h-8 text-darkText"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-darkText">Delivering a PIP</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">Five days from delivering your first Performance Improvement Plan? Walk through the dialogue with Pexera to check your language and tone against standard HR guardrails.</p>
+                        <h3 class="text-xl font-bold mb-3 text-darkText">Multi-Stakeholder Demo</h3>
+                        <p class="text-sm leading-relaxed text-gray-600">Presenting to technical, financial, and executive buyers at once? Rehearse threading all three motivations so you don't lose the room to one stakeholder's agenda.</p>
                     </div>
 
                     <!-- Case 3 -->
                     <div class="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
                         <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm border border-gray-100">
-                            <i data-lucide="scale" class="w-8 h-8 text-secondary"></i>
+                            <i data-lucide="file-signature" class="w-8 h-8 text-secondary"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-darkText">Performance Calibrations</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">When another leader advocates against your report's rating, you need a strong case. Stress-test your arguments against the strongest counter-arguments before the real meeting.</p>
+                        <h3 class="text-xl font-bold mb-3 text-darkText">Procurement Pushback</h3>
+                        <p class="text-sm leading-relaxed text-gray-600">Procurement just dropped a 40-line redline. Rehearse the top five concessions you will and won't make against a "Procurement Hammer" persona to protect ACV.</p>
                     </div>
                 </div>
             </div>
@@ -306,9 +306,9 @@
         <section id="benefits" class="py-16 md:py-24 px-6 bg-[#F4F8F2]">
             <div class="container mx-auto max-w-6xl">
                 <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-darkText">Specialized coaching, tailored to your reality.</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-darkText">Methodology depth meets deal-motion realism.</h2>
                     <p class="text-base md:text-lg text-bodyText px-4">
-                        Pexera combines established management science with your actual work context to deliver highly relevant, actionable guidance right when you need it.
+                        Generic "sales best practices" don't close deals. Pexera anchors directly to the specific sales methodologies enterprise teams already use.
                     </p>
                 </div>
                 
@@ -316,28 +316,30 @@
                     <!-- Item 1 -->
                     <div class="text-left bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
                         <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-6 text-green-600 border border-green-100">
-                            <i data-lucide="book" class="w-7 h-7"></i>
+                            <i data-lucide="book-open-check" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-darkText">Grounded in the Canon</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">Every prompt and roleplay response traces back to recognized management frameworks and practices.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">Every prompt, brief, and roleplay response traces back to recognized B2B sales frameworks.</p>
                         <ul class="space-y-2 text-sm text-gray-500 font-medium">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> SBI (Situation-Behavior-Impact)</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Effective Communication Structures</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Edmondson Psychological Safety</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> MEDDPICC (Enterprise Qualification)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> SPIN & Gap Selling (Discovery)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Challenger (Competitive Displacement)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Sandler & SPICED</li>
                         </ul>
                     </div>
 
                     <!-- Item 2 -->
                     <div class="text-left bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
                         <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600 border border-blue-100">
-                            <i data-lucide="git-merge" class="w-7 h-7"></i>
+                            <i data-lucide="network" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-darkText">Context-Aware Prompts</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">Pexera integrates directly with your tooling to understand the relationship and history before generating a prep brief.</p>
+                        <h3 class="text-xl font-bold mb-3 text-darkText">Context-Aware Intelligence</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">Pexera reads your environment to understand the prospect, deal stage, and history before generating a brief.</p>
                         <ul class="space-y-2 text-sm text-gray-500 font-medium">
-                            <li class="flex items-center gap-2"><i data-lucide="calendar-check" class="w-4 h-4 text-blue-500"></i> Pre-reads Calendar for meeting intent</li>
-                            <li class="flex items-center gap-2"><i data-lucide="slack" class="w-4 h-4 text-blue-500"></i> Maps reporting lines via Slack Identity</li>
-                            <li class="flex items-center gap-2"><i data-lucide="layout-dashboard" class="w-4 h-4 text-blue-500"></i> Upcoming: Integrations with CRM & Task Trackers</li>
+                            <li class="flex items-center gap-2"><i data-lucide="calendar-search" class="w-4 h-4 text-blue-500"></i> Calendar Sync for meeting intent & attendees</li>
+                            <li class="flex items-center gap-2"><i data-lucide="clipboard-paste" class="w-4 h-4 text-blue-500"></i> Paste-in deal notes & previous transcripts</li>
+                            <li class="flex items-center gap-2"><i data-lucide="database" class="w-4 h-4 text-blue-500"></i> Salesforce / HubSpot sync for deal stage & ACV</li>
+                            <li class="flex items-center gap-2"><i data-lucide="bot" class="w-4 h-4 text-blue-500"></i> Dynamic Buyer Personas based on segment</li>
                         </ul>
                     </div>
                 </div>
@@ -347,8 +349,8 @@
         <!-- App Flow / How it works (SLACK UI) -->
         <section id="how-it-works" class="py-16 md:py-24 px-6 bg-white overflow-hidden border-t border-gray-100">
             <div class="container mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-darkText">The Coaching Loop</h2>
-                <p class="text-center text-gray-500 mb-10 max-w-2xl mx-auto">Triggered automatically by your calendar. Delivered entirely within Slack. No new dashboards to check daily.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-darkText">The Practice Loop</h2>
+                <p class="text-center text-gray-500 mb-10 max-w-2xl mx-auto">Triggered automatically by your calendar. Delivered entirely within Slack. No tab switching.</p>
                 
                 <!-- SLACK ANIMATION -->
                 <div class="flex justify-center mb-16">
@@ -365,13 +367,13 @@
                                 <div class="p-4 space-y-4">
                                     <div>
                                         <div class="text-white/60 text-xs font-bold mb-2 uppercase tracking-wide">Channels</div>
-                                        <div class="text-white/80 text-sm py-1"># team-leads</div>
-                                        <div class="text-white/80 text-sm py-1"># general</div>
+                                        <div class="text-white/80 text-sm py-1"># sales-team</div>
+                                        <div class="text-white/80 text-sm py-1"># wins-and-losses</div>
                                     </div>
                                     <div>
                                         <div class="text-white/60 text-xs font-bold mb-2 uppercase tracking-wide">Apps</div>
                                         <div class="bg-white/10 text-white rounded px-2 py-1.5 text-sm flex items-center gap-2">
-                                            <i data-lucide="bot" class="w-4 h-4"></i> Pexera Coach
+                                            <i data-lucide="bot" class="w-4 h-4"></i> Pexera Sell
                                         </div>
                                     </div>
                                 </div>
@@ -381,7 +383,7 @@
                             <div class="flex-1 flex flex-col relative bg-white">
                                 <!-- Chat Header -->
                                 <div class="h-14 border-b border-gray-200 flex items-center px-4 font-bold text-gray-800 gap-2 shadow-sm z-20 bg-white">
-                                    <i data-lucide="bot" class="w-5 h-5 text-gray-600"></i> Pexera Coach
+                                    <i data-lucide="bot" class="w-5 h-5 text-gray-600"></i> Pexera Sell
                                 </div>
 
                                 <!-- Screen 1: PREP -->
@@ -390,14 +392,15 @@
                                         <div class="flex items-start gap-3">
                                             <div class="w-8 h-8 rounded bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0"><i data-lucide="bot" class="w-4 h-4 text-gray-600"></i></div>
                                             <div class="flex-1">
-                                                <div class="font-bold text-sm text-gray-800">Pexera Coach <span class="text-xs bg-gray-100 text-gray-500 font-normal px-1 rounded ml-1">APP</span> <span class="text-xs text-gray-400 font-normal ml-2">9:00 AM</span></div>
-                                                <div class="text-sm text-gray-700 mt-1 mb-2">You have a 1:1 scheduled with <strong>David</strong> in 30 minutes. Do you want to prepare?</div>
+                                                <div class="font-bold text-sm text-gray-800">Pexera Sell <span class="text-xs bg-gray-100 text-gray-500 font-normal px-1 rounded ml-1">APP</span> <span class="text-xs text-gray-400 font-normal ml-2">1:30 PM</span></div>
+                                                <div class="text-sm text-gray-700 mt-1 mb-2">You have a late-stage discovery call with <strong>David (CFO, GlobalTech)</strong> in 30 mins. Want to prep?</div>
                                                 
                                                 <div class="border border-gray-200 rounded-lg p-3 bg-gray-50 mb-3 shadow-sm">
-                                                    <div class="font-bold text-xs text-gray-800 mb-1 flex items-center gap-1"><i data-lucide="book-open" class="w-3 h-3 text-primary"></i> Situation-Behavior-Impact (SBI) Brief</div>
-                                                    <div class="text-xs text-gray-600 mb-2">Based on prior notes, this is a conversation about meeting etiquette. Here is a structured opening:</div>
-                                                    <div class="bg-white border border-gray-200 p-2 rounded text-xs text-gray-700 italic border-l-2 border-l-primary">
-                                                        "David, yesterday at the project presentation (Situation), you dismissed Sarah's ideas without letting her finish (Behavior). This shut down the discussion and prevented us from finding a compromise (Impact)."
+                                                    <div class="font-bold text-xs text-gray-800 mb-1 flex items-center gap-1"><i data-lucide="target" class="w-3 h-3 text-primary"></i> MEDDPICC Brief</div>
+                                                    <div class="text-xs text-gray-600 mb-2">Since David is a CFO stepping into a late-stage deal, focus on Economic Buyer & Metrics:</div>
+                                                    <div class="bg-white border border-gray-200 p-2 rounded text-xs text-gray-700 border-l-2 border-l-primary space-y-1">
+                                                        <p><strong>Goal:</strong> Confirm payback period expectations and validate budget authority.</p>
+                                                        <p><strong>SPIN Question to ask:</strong> "If we can't implement before Q3, how does that impact the margin targets you mentioned last month?"</p>
                                                     </div>
                                                 </div>
 
@@ -414,29 +417,29 @@
                                 <div class="demo-screen inactive absolute top-14 bottom-0 left-0 right-0 bg-white p-4 md:p-6 overflow-hidden flex flex-col justify-end pb-8" data-step="1">
                                     <div class="max-w-xl mx-auto w-full space-y-4">
                                         <div class="flex items-center justify-center mb-4">
-                                            <span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full uppercase tracking-wider">Roleplay Mode: Defensive IC</span>
+                                            <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-2 py-1 rounded-full uppercase tracking-wider">Persona: Skeptical CFO</span>
                                         </div>
 
                                         <div class="flex items-start gap-3 flex-row-reverse">
-                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=EM&mouth=smile" class="w-8 h-8 rounded bg-gray-100 border border-gray-200 flex-shrink-0">
+                                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=AE&mouth=smile" class="w-8 h-8 rounded bg-gray-100 border border-gray-200 flex-shrink-0">
                                             <div class="flex-1 text-right">
-                                                <div class="font-bold text-sm text-gray-800"><span class="text-xs text-gray-400 font-normal mr-2">9:02 AM</span> You</div>
+                                                <div class="font-bold text-sm text-gray-800"><span class="text-xs text-gray-400 font-normal mr-2">1:32 PM</span> You</div>
                                                 <div class="bg-gray-100 border border-gray-200 text-sm text-gray-800 p-2.5 rounded-lg rounded-tr-none inline-block mt-1">
-                                                    David, yesterday at the project presentation, you dismissed Sarah's ideas without letting her finish.
+                                                    David, to ensure we align with your Q3 goals, how are you currently measuring the ROI on the existing system?
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="flex items-start gap-3">
-                                            <div class="w-8 h-8 rounded bg-purple-100 border border-purple-200 flex items-center justify-center flex-shrink-0"><i data-lucide="user-x" class="w-4 h-4 text-purple-600"></i></div>
+                                            <div class="w-8 h-8 rounded bg-blue-100 border border-blue-200 flex items-center justify-center flex-shrink-0"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
                                             <div class="flex-1">
-                                                <div class="font-bold text-sm text-gray-800">Persona (David) <span class="text-xs bg-gray-100 text-gray-500 font-normal px-1 rounded ml-1">APP</span> <span class="text-xs text-gray-400 font-normal ml-2">9:02 AM</span></div>
+                                                <div class="font-bold text-sm text-gray-800">Persona (David) <span class="text-xs bg-gray-100 text-gray-500 font-normal px-1 rounded ml-1">APP</span> <span class="text-xs text-gray-400 font-normal ml-2">1:32 PM</span></div>
                                                 <div class="bg-white border border-gray-200 shadow-sm text-sm text-gray-800 p-2.5 rounded-lg rounded-tl-none inline-block mt-1">
-                                                    I didn't dismiss her ideas, we just didn't have time. If we waited for everyone to agree, we'd miss the deadline again. I'm just trying to save the project.
+                                                    Look, I've got 5 minutes. My team says they like your tool, but we already pay for Salesforce. Cut to the chase—what's the hard payback period on this? I'm not approving overlapping software.
                                                 </div>
                                                 
                                                 <div class="mt-2 flex gap-2">
-                                                    <button class="bg-white border border-gray-300 text-gray-500 text-[10px] font-bold py-1 px-2 rounded hover:bg-gray-50">Ask Coach: "Why did he answer like that?"</button>
+                                                    <button class="bg-white border border-gray-300 text-gray-500 text-[10px] font-bold py-1 px-2 rounded hover:bg-gray-50">Ask Coach: "How should I counter with MEDDPICC?"</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,16 +456,18 @@
                                         <div class="flex items-start gap-3">
                                             <div class="w-8 h-8 rounded bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0"><i data-lucide="bot" class="w-4 h-4 text-gray-600"></i></div>
                                             <div class="flex-1">
-                                                <div class="font-bold text-sm text-gray-800">Pexera Coach <span class="text-xs bg-gray-100 text-gray-500 font-normal px-1 rounded ml-1">APP</span> <span class="text-xs text-gray-400 font-normal ml-2">10:00 AM</span></div>
-                                                <div class="text-sm text-gray-700 mt-1 mb-2">How did the 1:1 with David go yesterday? Capturing a quick reflection helps track your growth.</div>
+                                                <div class="font-bold text-sm text-gray-800">Pexera Sell <span class="text-xs bg-gray-100 text-gray-500 font-normal px-1 rounded ml-1">APP</span> <span class="text-xs text-gray-400 font-normal ml-2">10:00 AM</span></div>
+                                                <div class="text-sm text-gray-700 mt-1 mb-2">How did the call with David go yesterday? Let's update your MEDDPICC fields.</div>
                                                 
                                                 <div class="border border-gray-200 rounded-lg p-3 bg-gray-50 mb-3 shadow-sm">
-                                                    <div class="text-xs text-gray-700 font-medium mb-2">Were you able to stick to the SBI framework?</div>
+                                                    <div class="text-xs text-gray-700 font-medium mb-2">Did you confirm David is the actual <span class="font-bold">Economic Buyer</span>?</div>
                                                     <div class="flex gap-2">
-                                                        <button class="bg-white border border-gray-300 shadow-sm text-gray-700 text-xs font-bold py-1.5 px-3 rounded hover:bg-gray-50">Yes, it helped</button>
-                                                        <button class="bg-white border border-gray-300 shadow-sm text-gray-700 text-xs font-bold py-1.5 px-3 rounded hover:bg-gray-50">Conversation derailed</button>
+                                                        <button class="bg-white border border-gray-300 shadow-sm text-gray-700 text-xs font-bold py-1.5 px-3 rounded hover:bg-gray-50">Yes, he controls budget</button>
+                                                        <button class="bg-white border border-gray-300 shadow-sm text-gray-700 text-xs font-bold py-1.5 px-3 rounded hover:bg-gray-50">No, need higher authority</button>
                                                     </div>
-                                                    <div class="mt-3 text-[10px] text-gray-400 italic">This reflection is strictly private to you. Admins cannot see this.</div>
+                                                    <div class="mt-3 text-[10px] text-gray-500 flex items-center">
+                                                        <i data-lucide="database" class="w-3 h-3 mr-1 text-blue-500"></i> This will sync back to Salesforce Opportunity.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -484,124 +489,122 @@
                     <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
                         <div class="w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold mb-4 shadow-sm bg-white border-2 border-primary text-darkText group-hover:scale-110 transition-transform">1</div>
                         <h3 class="text-lg font-bold mb-2 text-darkText">PREP</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Before the calendar event, receive a 1-screen prep brief grounded in a specific management framework (e.g., SBI).</p>
+                        <p class="text-sm text-gray-500 leading-relaxed">Before the event, get a 1-screen prep brief grounded in MEDDPICC, SPIN, or Challenger, calibrated to the deal stage.</p>
                     </div>
                     <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
                         <div class="w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold mb-4 shadow-sm bg-white border-2 border-primary text-darkText group-hover:scale-110 transition-transform">2</div>
                         <h3 class="text-lg font-bold mb-2 text-darkText">ROLEPLAY</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Engage in a text-mode rehearsal against a specific persona (Defensive, Anxious, Ambitious) directly in a Slack thread.</p>
+                        <p class="text-sm text-gray-500 leading-relaxed">Engage in text-mode rehearsal against a specific persona (Skeptical CFO, Ghosting Champion) in a Slack thread.</p>
                     </div>
                     <div class="relative flex flex-col items-center text-center bg-transparent z-10 group">
                         <div class="w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold mb-4 shadow-sm bg-white border-2 border-primary text-darkText group-hover:scale-110 transition-transform">3</div>
                         <h3 class="text-lg font-bold mb-2 text-darkText">REFLECT</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">A scheduled DM 24 hours later captures a brief reflection, rolling up into a private confidence trajectory.</p>
+                        <p class="text-sm text-gray-500 leading-relaxed">A scheduled DM 24 hours later captures a brief reflection and optionally writes back structured fields to your CRM.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Privacy Section -->
-        <section id="privacy" class="py-16 px-6 bg-[#F4F8F2] border-t border-gray-200">
-            <div class="container mx-auto max-w-4xl text-center">
-                <div class="inline-block p-3 rounded-full mb-4 bg-white shadow-sm border border-gray-100">
-                    <i data-lucide="lock" class="w-6 h-6 text-gray-700"></i>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-darkText">Strictly Private to the Manager</h2>
-                <p class="text-base text-bodyText mb-8 max-w-2xl mx-auto">
-                    Coaching only works with psychological safety. Transcripts and reflections are encrypted at rest and scoped to you alone. Admins and HR see usage counts and anonymized macro-themes, never conversation content. Personal data is redacted before hitting the LLM.
-                </p>
-            </div>
-        </section>
-
-        <!-- Analytics Section -->
-        <section id="analytics" class="py-16 md:py-24 px-6 bg-white border-t border-gray-100">
+        <!-- Manager Coaching Dashboard Section -->
+        <section id="coaching" class="py-16 md:py-24 px-6 bg-[#F4F8F2] border-t border-gray-200">
             <div class="container mx-auto max-w-6xl">
                 <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
-                    <div class="order-2 lg:order-1">
-                        <div class="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-4 flex items-center w-max">
-                            <i data-lucide="bar-chart" class="w-3.5 h-3.5 mr-1.5"></i> Admin Dashboard
+                    <div class="order-2 lg:order-1 relative">
+                        <!-- Dashboard Mockup -->
+                        <div class="absolute -top-10 -left-10 w-64 h-64 bg-green-100 rounded-full filter blur-3xl opacity-50"></div>
+                        <div class="bg-white border border-gray-200 shadow-2xl rounded-2xl p-5 md:p-8 relative z-10 transform lg:-rotate-2 hover:rotate-0 transition-transform duration-500">
+                            <div class="flex items-center justify-between mb-6 border-b border-gray-100 pb-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-darkText rounded-lg flex items-center justify-center text-white"><i data-lucide="layout-dashboard" class="w-4.5 h-4.5"></i></div>
+                                    <span class="font-bold text-gray-800">Team Coaching Hub</span>
+                                </div>
+                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-medium">Frontline Manager View</span>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="p-3 border border-gray-100 bg-gray-50 rounded-xl">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div class="font-bold text-sm text-gray-800">Sarah Jenkins (AE)</div>
+                                        <span class="text-[10px] text-gray-500">Just practiced vs. Procurement</span>
+                                    </div>
+                                    <div class="flex gap-4 text-xs text-gray-600 mb-3">
+                                        <span><i data-lucide="check-circle" class="w-3 h-3 inline text-green-500"></i> MEDDPICC: 85%</span>
+                                        <span><i data-lucide="alert-circle" class="w-3 h-3 inline text-orange-500"></i> SPIN: 40%</span>
+                                    </div>
+                                    <div class="border-t border-gray-200 pt-2 flex justify-between items-center">
+                                        <span class="text-[10px] text-gray-500">System: Needs work on implication questions.</span>
+                                        <button class="text-[10px] font-bold text-blue-600 hover:underline">Review Transcript & Comment</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-100 bg-white rounded-xl shadow-sm">
+                                    <div class="font-bold text-sm text-gray-800 mb-1">Assign Practice Scenario</div>
+                                    <p class="text-[10px] text-gray-500 mb-3">Team is heavy on procurement objections this quarter. Assign drill:</p>
+                                    <div class="flex gap-2">
+                                        <select class="text-xs border rounded px-2 py-1 flex-1 bg-gray-50">
+                                            <option>Persona: Procurement Hammer</option>
+                                        </select>
+                                        <button class="bg-primary text-darkText text-xs font-bold px-3 py-1 rounded">Assign</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-6">Measure leader confidence, not individual words.</h2>
+                    </div>
+
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-4 flex items-center w-max">
+                            <i data-lucide="eye" class="w-3.5 h-3.5 mr-1.5"></i> Enablement & Coaching Visibility
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-6">Turn practice into pipeline.</h2>
                         <p class="text-gray-600 text-base md:text-lg mb-8">
-                            Executive leadership and HR need to know if the tool is working without violating manager trust. Our admin view provides high-level engagement metrics and aggregate confidence growth.
+                            Practice only matters if managers can coach it. Pexera gives Frontline Managers full visibility into their reps' prep and roleplay sessions to diagnose skill gaps mid-deal.
                         </p>
                         
                         <ul class="space-y-4 mb-8 text-sm md:text-base">
-                            <li class="flex gap-3 items-center text-gray-700"><div class="bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div> Track activation rates (Loops completed per month)</li>
-                            <li class="flex gap-3 items-center text-gray-700"><div class="bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div> Measure self-reported confidence delta</li>
-                            <li class="flex gap-3 items-center text-gray-700"><div class="bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5"></i></div> Surface anonymized thematic gaps across the organization</li>
+                            <li class="flex gap-3 items-start text-gray-700">
+                                <div class="bg-green-100 p-1.5 rounded-full text-green-700 flex-shrink-0 mt-0.5"><i data-lucide="file-text" class="w-4 h-4"></i></div> 
+                                <div><strong class="text-gray-900 block">Transcript Review & Scoring</strong> See exactly how reps handled objections and review automated scores mapped to MEDDPICC/SPIN rubrics.</div>
+                            </li>
+                            <li class="flex gap-3 items-start text-gray-700">
+                                <div class="bg-green-100 p-1.5 rounded-full text-green-700 flex-shrink-0 mt-0.5"><i data-lucide="message-square" class="w-4 h-4"></i></div> 
+                                <div><strong class="text-gray-900 block">Micro-Coaching Notes</strong> Leave comments on specific text exchanges within a rep's roleplay session, right from your dashboard.</div>
+                            </li>
+                            <li class="flex gap-3 items-start text-gray-700">
+                                <div class="bg-green-100 p-1.5 rounded-full text-green-700 flex-shrink-0 mt-0.5"><i data-lucide="crosshair" class="w-4 h-4"></i></div> 
+                                <div><strong class="text-gray-900 block">Targeted Assignments</strong> Send a specific persona scenario (e.g., "Run Procurement pushback 2x") to a rep directly before a major call.</div>
+                            </li>
                         </ul>
-                    </div>
-
-                    <!-- Dashboard Mockup -->
-                    <div class="relative order-1 lg:order-2">
-                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-green-100 rounded-full filter blur-3xl opacity-50"></div>
-                        <div class="bg-white border border-gray-200 shadow-2xl rounded-2xl p-5 md:p-8 relative z-10 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
-                            <div class="flex items-center justify-between mb-6 md:mb-8 border-b border-gray-100 pb-4">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-darkText rounded-lg flex items-center justify-center text-white"><i data-lucide="activity" class="w-4.5 h-4.5"></i></div>
-                                    <span class="font-bold text-gray-800">Leadership Effectiveness</span>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-3 md:gap-4 mb-6">
-                                <div class="p-3 md:p-4 bg-gray-50 rounded-xl">
-                                    <div class="text-xs text-gray-500 mb-1">Coaching Loops Run</div>
-                                    <div class="text-xl md:text-2xl font-bold text-gray-800">128</div>
-                                    <div class="text-[10px] md:text-xs text-green-600 flex items-center mt-1"><i data-lucide="trending-up" class="w-3 h-3 mr-1"></i> Active usage (3/wk avg)</div>
-                                </div>
-                                <div class="p-3 md:p-4 bg-gray-50 rounded-xl">
-                                    <div class="text-xs text-gray-500 mb-1">Confidence Growth</div>
-                                    <div class="text-xl md:text-2xl font-bold text-gray-800">+32%</div>
-                                    <div class="text-[10px] md:text-xs text-gray-400 mt-1">Based on Reflect responses</div>
-                                </div>
-                            </div>
-
-                            <div class="mb-2">
-                                <div class="text-sm font-bold text-gray-700 mb-3">Top Prepared Conversations</div>
-                                <div class="space-y-4">
-                                    <div>
-                                        <div class="flex justify-between text-xs mb-1.5 font-medium text-gray-600"><span>Performance Reviews</span><span>45%</span></div>
-                                        <div class="h-2.5 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 45%"></div></div>
-                                    </div>
-                                    <div>
-                                        <div class="flex justify-between text-xs mb-1.5 font-medium text-gray-600"><span>Delivering Critical Feedback</span><span>30%</span></div>
-                                        <div class="h-2.5 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 30%"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Registration Form (Waitlist) -->
-        <section id="waitlist" class="py-16 md:py-24 px-6 relative overflow-hidden bg-[#F4F8F2] border-t border-green-50/50">
+        <section id="waitlist" class="py-16 md:py-24 px-6 relative overflow-hidden bg-white border-t border-gray-100">
             <div class="container mx-auto max-w-2xl relative z-10">
                 <div class="text-center mb-10">
-                    <div class="inline-block p-3 rounded-full mb-6 bg-white shadow-sm">
+                    <div class="inline-block p-3 rounded-full mb-6 bg-[#F4F8F2] border border-green-100 shadow-sm">
                         <i data-lucide="rocket" class="w-8 h-8 text-secondary"></i>
                     </div>
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-darkText">Request a 14-Day Pilot</h2>
-                    <p class="text-lg md:text-xl text-bodyText">See if AI coaching moves the needle for your team leaders. Takes under 15 minutes for IT to install the Slack app.</p>
+                    <p class="text-lg md:text-xl text-bodyText">See if AI roleplay actually moves the needle for your win rates. Takes under 15 minutes for IT to install the Slack app.</p>
                 </div>
                 
                 <!-- Success Message -->
-                <div id="success-message" class="hidden bg-white p-8 rounded-2xl shadow-sm text-center border border-green-100 animate-fade-in-up">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div id="success-message" class="hidden bg-[#F4F8F2] p-8 rounded-2xl shadow-sm text-center border border-green-100 animate-fade-in-up">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 border border-green-200">
                         <i data-lucide="check" class="w-8 h-8 text-darkText"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-2 text-darkText">Pilot Request Sent!</h3>
-                    <p class="text-bodyText">Thanks. We will contact <span id="submitted-email" class="font-bold"></span> soon to schedule the kickoff.</p>
+                    <p class="text-bodyText">Thanks. We will contact <span id="submitted-email" class="font-bold"></span> soon to discuss deal motions and schedule the kickoff.</p>
                 </div>
 
-                <form id="waitlist-form" class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 space-y-5 md:space-y-6 relative z-20">
+                <form id="waitlist-form" class="bg-[#F4F8F2] p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200 space-y-5 md:space-y-6 relative z-20">
                     <div class="space-y-2">
                         <label class="text-sm font-bold ml-1 text-darkText">Full Name</label>
                         <div class="relative">
                             <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="user" class="w-4.5 h-4.5"></i></div>
-                            <input type="text" name="name" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="Jane Doe">
+                            <input type="text" name="name" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="Jane Doe">
                         </div>
                     </div>
 
@@ -609,7 +612,7 @@
                         <label class="text-sm font-bold ml-1 text-darkText">Work Email</label>
                         <div class="relative">
                             <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="mail" class="w-4.5 h-4.5"></i></div>
-                            <input type="email" name="email" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="jane@company.com">
+                            <input type="email" name="email" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="jane@company.com">
                         </div>
                     </div>
 
@@ -617,7 +620,7 @@
                         <label class="text-sm font-bold ml-1 text-darkText">Role</label>
                         <div class="relative">
                             <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="briefcase" class="w-4.5 h-4.5"></i></div>
-                            <input type="text" name="title" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="Head of HR / CEO">
+                            <input type="text" name="title" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="VP Sales / CRO / Enablement">
                         </div>
                     </div>
 
@@ -626,20 +629,20 @@
                             <label class="text-sm font-bold ml-1 text-darkText">Company</label>
                             <div class="relative">
                                 <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="building-2" class="w-4.5 h-4.5"></i></div>
-                                <input type="text" name="company" class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="Acme Org">
+                                <input type="text" name="company" class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all" placeholder="Acme Org">
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <label class="text-sm font-bold ml-1 text-darkText">Number of Managers</label>
+                            <label class="text-sm font-bold ml-1 text-darkText">Sales Team Size</label>
                             <div class="relative">
                                 <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"><i data-lucide="users" class="w-4.5 h-4.5"></i></div>
-                                <select name="managers" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all appearance-none">
-                                    <option value="">Select count</option>  
-                                    <option value="1-5">1-5 leaders</option>
-                                    <option value="6-20">6-20 leaders</option>
-                                    <option value="21-50">21-50 leaders</option>
-                                    <option value="50+">50+ leaders</option>
+                                <select name="reps" required class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9EC79B] transition-all appearance-none">
+                                    <option value="">Select reps count</option>  
+                                    <option value="1-10">1-10 reps (Founder-led/Early)</option>
+                                    <option value="11-50">11-50 reps (SMB SaaS)</option>
+                                    <option value="51-200">51-200 reps (Mid-market)</option>
+                                    <option value="200+">200+ reps (Enterprise)</option>
                                 </select>
                             </div>
                         </div>
@@ -649,7 +652,7 @@
                         Request Pilot
                     </button>
                     
-                    <p class="text-center text-xs text-gray-400 mt-4">Pexera requires a Slack workspace for installation.</p>
+                    <p class="text-center text-xs text-gray-500 mt-4">Pexera Sell requires a Slack workspace for installation.</p>
                 </form>
             </div>
         </section>
@@ -667,17 +670,38 @@
                                 <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
                             </summary>
                             <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
-                                Every coaching session is anchored to established management canons, including the SBI framework, Crucial Conversations structure, and psychological safety research, tailored specifically to your upcoming calendar events.
+                                Every prep brief and roleplay session is explicitly anchored to named sales methodologies (MEDDPICC, SPIN, Challenger, Sandler, Gap Selling, etc.), mapped to the deal stage of your specific organization.
                             </div>
                         </details>
                         
                         <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
                             <summary class="flex items-center justify-between cursor-pointer">
-                                <h3 class="font-bold text-darkText text-sm pr-4">What data does it read from Slack/Calendar?</h3>
+                                <h3 class="font-bold text-darkText text-sm pr-4">What data does it read from our systems?</h3>
                                 <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
                             </summary>
                             <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
-                                It reads meeting titles and participant graphs to trigger prep briefs at the right time. Personal data is redacted before hitting the model, and we operate on zero-data-retention (ZDR) endpoints so your data is never used to train the AI.
+                                It reads meeting titles and attendees from Calendar, and (optionally) reads Deal Stage, ACV, and recent activity from Salesforce or HubSpot. Named individuals are redacted before hitting the model, utilizing Zero-Data-Retention (ZDR) endpoints.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="space-y-4">
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Can managers see the transcripts?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Yes. Unlike generic HR tools, Sales Call Coach is built for enablement. Managers have full visibility to review their direct reports' transcripts, score sessions against rubrics, and provide deal-specific coaching. VP/CRO levels see aggregated team heatmaps.
+                            </div>
+                        </details>
+                        
+                        <details class="group bg-white rounded-xl border border-gray-200 p-4 [&_summary::-webkit-details-marker]:hidden shadow-sm hover:shadow-md transition-shadow">
+                            <summary class="flex items-center justify-between cursor-pointer">
+                                <h3 class="font-bold text-darkText text-sm pr-4">Do you support live meeting intelligence (like Gong)?</h3>
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0"></i>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 leading-relaxed animate-fade-in-up">
+                                Not in v1. Gong and Chorus review what already happened. Pexera operates entirely <em>before</em> the call in Slack to prepare the seller for what is <em>about</em> to happen. (We plan to integrate with conversation intelligence tools in v2).
                             </div>
                         </details>
                     </div>
@@ -698,7 +722,7 @@
             <div class="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium text-bodyText">
                 <a href="#" class="hover:text-darkText transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-darkText transition-colors">Security</a>
-                <a href="#" class="hover:text-darkText transition-colors">Frameworks Source List</a>
+                <a href="#" class="hover:text-darkText transition-colors">Sales Framework Licensing</a>
             </div>
 
             <div class="text-sm text-gray-400">
